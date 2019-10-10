@@ -1,17 +1,23 @@
 <template>
   <div class="container">
     <div>
-      <div class="field">
+      <div class="field" style="min-width:80vw">
         <div class="control">
-          <input
+          <textarea
             v-model="qrtext"
-            class="input"
+            class="textarea"
             type="text"
-            placeholder="Normal input"
+            placeholder='please input 
+            [{"label":"label","code":"code"},...]'
           />
         </div>
       </div>
-      <qr-frame :label="qrtext" :code-text="qrtext" />
+      <qr-frame
+        v-for="qr in qrJson"
+        :key="qr.index"
+        :label="qr.label"
+        :code="qr.code"
+      />
     </div>
   </div>
 </template>
@@ -24,7 +30,20 @@ export default {
     QrFrame
   },
   data() {
-    return { qrtext: '' }
+    return {
+      qrtext:
+        '[{"label":"label1","code":"code1"},' +
+        '{"label":"label2","code":"code2"}]'
+    }
+  },
+  computed: {
+    qrJson: function() {
+      try {
+        return JSON.parse(this.qrtext)
+      } catch (error) {
+        return [{ label: 'error', code: 'error' }]
+      }
+    }
   }
 }
 </script>

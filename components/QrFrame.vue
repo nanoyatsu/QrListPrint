@@ -1,7 +1,7 @@
 <template>
   <div>
-    koko-ni-qr-takusan:{{ label }}
-    <qrcode-vue :value="codeText" />
+    {{ label }}
+    <qrcode-vue :value="code" :size="200" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
       type: String,
       default: 'undefined'
     },
-    codeText: {
+    code: {
       type: String,
       default: undefined
     }
