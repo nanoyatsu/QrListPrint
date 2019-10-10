@@ -1,5 +1,5 @@
 {
-  "name": "QRprint",
+  "name": "QrListPrint",
   "version": "1.0.0",
   "description": "Print QRcodes from json text",
   "author": "nredjap",

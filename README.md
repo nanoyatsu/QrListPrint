@@ -1,4 +1,4 @@
-# QRprint
+# QrListPrint
 
 > Print QRcodes from json text
 
