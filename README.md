@@ -2,6 +2,16 @@
 
 > Print QRcodes from json text
 
+この形のJSONを入力するとQRコードをたくさん吐きます
+```json
+        [
+          {"label":"label1","code":"code1"},
+          {"label":"label2","code":"code2"},
+          ...
+        ]
+
+```
+
 ## Build Setup
 
 ``` bash
