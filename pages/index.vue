@@ -11,7 +11,7 @@
           />
         </div>
       </div>
-      <qr-frame :label="aaa" :code-text="bbb"></qr-frame>
+      <qr-frame :label="qrtext" :code-text="qrtext" />
     </div>
   </div>
 </template>
