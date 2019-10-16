@@ -1,5 +1,6 @@
 export default {
   mode: 'spa',
+  router: { base: '/QrListPrint/' },
   /*
    ** Headers of the page
    */
