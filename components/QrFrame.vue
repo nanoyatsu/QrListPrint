@@ -1,7 +1,9 @@
 <template>
-  <div>
-    {{ label }}
-    <qrcode-vue :value="code" :size="200" />
+  <div class="box margin">
+    <qrcode-vue :value="code" :size="160" />
+    <div class="free-text">
+      {{ label }} : <code>{{ code }}</code>
+    </div>
   </div>
 </template>
 
@@ -24,4 +26,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.box.margin {
+  margin: 0.5em;
+}
+.box > .free-text {
+  max-width: 160px;
+  overflow-wrap: break-word;
+}
+</style>

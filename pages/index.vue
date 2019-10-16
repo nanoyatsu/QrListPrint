@@ -12,12 +12,15 @@
           />
         </div>
       </div>
-      <qr-frame
-        v-for="qr in qrJson"
-        :key="qr.index"
-        :label="qr.label"
-        :code="qr.code"
-      />
+      <div class="columns is-multiline is-centered is-mobile">
+        <qr-frame
+          v-for="qr in qrJson"
+          :key="qr.index"
+          class="column is-narrow"
+          :label="qr.label"
+          :code="qr.code"
+        />
+      </div>
     </div>
   </div>
 </template>
