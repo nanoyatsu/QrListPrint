@@ -35,8 +35,10 @@ export default {
   data() {
     return {
       qrtext:
-        '[{"label":"label1","code":"code1"},' +
-        '{"label":"label2","code":"code2"}]'
+        '[\n' +
+        '  {"label":"label1","code":"code1"},\n' +
+        '  {"label":"label2","code":"code2"}\n' +
+        ']'
     }
   },
   computed: {
