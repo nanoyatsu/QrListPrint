@@ -1,6 +1,7 @@
 # QrListPrint
 
 > Print QRcodes from json text
+> https://nredjap.github.io/QrListPrint/
 
 この形のJSONを入力するとQRコードをたくさん吐きます
 ```json
